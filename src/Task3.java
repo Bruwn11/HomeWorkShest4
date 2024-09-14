@@ -18,7 +18,7 @@ public class Task3 {
                 System.out.println("Осень");
                 break;
             default:
-                System.out.println("Введите пожалуйста число, которое соответствует месяцу.");
+                System.out.println("Введите пожалуйста число,  которое соответствует месяцу.");
         }
     }
 }
