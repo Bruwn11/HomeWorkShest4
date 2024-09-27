@@ -9,7 +9,7 @@ public class HomeWorkLesson19_20 {
         task1();
         task2();
         task3();
-        System.out.println("Пожалуйста, напишите несколько слов через пробел.");
+        System.out.println("Напишите несколько слов через пробел.");
         String str = scan.nextLine();
         task4(str);
         task5(str);
