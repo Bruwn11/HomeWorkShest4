@@ -5,6 +5,15 @@ public class Book {
     private Author author;
     private Integer years;
 
+    public Book() {
+
+    }
+
+    public Book(String title, Author author, Integer years) {
+        this.title = title;
+        this.author = author;
+        this.years = years;
+    }
 
     public String getTitle() {
         return title;
@@ -30,11 +39,12 @@ public class Book {
         this.years = years;
     }
 
-    public String getInfo() {
+    @Override
+    public String toString() {
         return "Book{" +
-                "Нзвание книги '" + title + '\'' +
-                ", автор " + author.getInfo() +
-                ", год издания " + years +
+                "title='" + title + '\'' +
+                ", author=" + author.toString() +
+                ", years=" + years +
                 '}';
     }
 }

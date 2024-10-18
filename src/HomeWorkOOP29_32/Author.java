@@ -5,6 +5,14 @@ public class Author {
     private String firstName;
     private String lastName;
 
+    public Author() {
+
+    }
+
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -22,10 +30,11 @@ public class Author {
         this.lastName = lastName;
     }
 
-    public String getInfo() {
+    @Override
+    public String toString() {
         return "Author{" +
-                "имя автора '" + firstName + '\'' +
-                ", фамилия автора '" + lastName + '\'' +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
     }
 }
