@@ -1,6 +1,6 @@
 package HomeWork33_34;
 
-public class Animal {
+public abstract class Animal {
     private String name;
 
     public Animal() {
@@ -10,12 +10,9 @@ public class Animal {
         this.name = name;
     }
 
-    public void makeSound() {
-        System.out.println("Звук животного");
-    }
-    public void eat() {
-        System.out.println("Животное ест");
-    }
+    public abstract void makeSound();
+    public abstract void move();
+    public abstract void eat();
 
     public String getName() {
         return name;
