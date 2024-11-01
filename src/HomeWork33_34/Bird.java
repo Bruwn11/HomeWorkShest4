@@ -1,57 +1,42 @@
 package HomeWork33_34;
 
 public class Bird extends Animal {
-    private String name;
-    private String canFly;
+    private Boolean canFly;
 
     public Bird() {
     }
 
-    public Bird(String name) {
-        this.name = name;
-    }
 
-    public Bird(String name, String canFly) {
-        this.name = name;
+    public Bird(String name, Boolean canFly) {
+        super(name);
         this.canFly = canFly;
     }
 
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCanFly() {
+    public Boolean getCanFly() {
         return canFly;
     }
 
-    public void setCanFly(String canFly) {
+    public void setCanFly(Boolean canFly) {
         this.canFly = canFly;
     }
 
     @Override
     public void makeSound() {
-        System.out.print("Птица по кличке " + name + ", поёт: чирик-чирик");
+        System.out.print("Птица по кличке " + getName() + ", поёт: чирик-чирик");
     }
 
     @Override
     public void move() {
-        if (canFly.equals("canFly")) {
-            System.out.print("Птица по кличке " + name + " летает");
+        if (canFly) {
+            System.out.print("Птица по кличке " + getName() + " летает");
         } else {
-            System.out.print("Птица по кличке " + name + " бегает и прыгает на лапах");
+            System.out.print("Птица по кличке " + getName() + " бегает и прыгает на лапах");
         }
     }
 
 
     @Override
     public void eat() {
-        System.out.print("Птица по кличке " + name + " ест семена");
+        System.out.print("Птица по кличке " + getName() + " ест семена");
     }
 }
